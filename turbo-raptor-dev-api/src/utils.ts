@@ -14,6 +14,19 @@ export function logInfo(message: string) {
     );
 }
 
+export function logError(message: string) {
+    const timestamp = `[${getTimeStamp()}]`;
+    const infoIcon = "❌";
+
+    console.log(
+        chalk.reset( // Ensures clean output
+            chalk.red.bold(timestamp) + " " + 
+            chalk.red(infoIcon) + " " + 
+            chalk.white(message)
+        )
+    );
+}
+
 export function getTimeStamp(): string {
     const now = new Date();
     

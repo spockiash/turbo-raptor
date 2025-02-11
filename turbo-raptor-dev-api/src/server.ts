@@ -1,6 +1,7 @@
 import { Application, Router } from "@oak/oak";
 import { displayBanner, displayStartupMessage } from "./consoleUtils.ts"
 import { generateFakeStockData } from "./dataService.ts"
+import { getStockFile, getStockFilesList } from "./api/fileApi.ts";
 
 const PROTOCOL:string = "HTTP"
 const PORT: number = 8000;
@@ -10,6 +11,9 @@ displayBanner();
 displayStartupMessage(PROTOCOL, HOST, PORT);
 
 const router = new Router()
+    .get("/api/files/stockdata/list", getStockFilesList)
+    .get("/api/files/stockdata/:filename", getStockFile)
+    
     .get("/api/fakeData", (ctx) => {
         ctx.response.body = generateFakeStockData("ETHUSDT", "1h");
     });

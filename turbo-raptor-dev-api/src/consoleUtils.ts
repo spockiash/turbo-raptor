@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import figlet from "figlet";
-
+import { getTimeStamp } from "./utils.ts";
 
 export function displayBanner(): void {
   console.clear(); // Clear console before displaying banner

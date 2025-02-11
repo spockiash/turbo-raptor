@@ -1,6 +1,4 @@
-import { Application, Router, Context } from "@oak/oak";
-import chalk from "chalk";
-import figlet from "figlet";
+import { Application, Router } from "@oak/oak";
 import { displayBanner, displayStartupMessage } from "./consoleUtils.ts"
 import { generateFakeStockData } from "./dataService.ts"
 

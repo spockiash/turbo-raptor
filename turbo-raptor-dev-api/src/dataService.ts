@@ -1,4 +1,4 @@
-import chalk from "chalk";
+import { logInfo } from "./utils.ts";
 
 export function generateFakeStockData(ticker: string, period: string): any[] {
     const now = new Date();
@@ -27,10 +27,8 @@ export function generateFakeStockData(ticker: string, period: string): any[] {
         tradeCount: tradeCount,
       });
     }
-  
-    console.log(
-      chalk.green(`[LOG] Generated ${fakeData.length} records for ${ticker}`)
-    );
+
+    logInfo(`Generated ${fakeData.length} records for ${ticker}`)
   
     return fakeData;
   }

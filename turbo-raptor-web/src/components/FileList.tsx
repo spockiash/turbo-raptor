@@ -49,28 +49,16 @@ const StockList = observer(() => {
   if (stockDataStore.error) return <p className="text-red-500">{stockDataStore.error}</p>;
 
   return (
-    <Card className="p-4 w-full max-w-md mx-auto">
-      <h2 className="text-xl font-semibold mb-4">Stock Data List</h2>
-      <div className="space-y-2">
-        {Array.isArray(stockDataStore.stockList) && stockDataStore.stockList.map((item) => (
-          <Button
-            key={item}
-            onClick={() => stockDataStore.selectItem(item)}
-            className={clsx("w-full text-left", {
-              "bg-blue-500 text-white": stockDataStore.selectedItem === item,
-              "bg-gray-200": stockDataStore.selectedItem !== item,
-            })}
-          >
-            {item}
-          </Button>
-        ))}
-      </div>
-      {stockDataStore.selectedItem && (
-        <p className="mt-4 text-sm text-gray-700">
-          Selected: <span className="font-bold">{stockDataStore.selectedItem}</span>
-        </p>
-      )}
-    </Card>
+    <>
+    <div className="flex flex-col gap-2">
+      <button className="block w-full bg-blue-400">
+        Hello
+      </button>
+      <button className="block w-full bg-blue-400">
+        World
+      </button>
+    </div>
+    </>
   );
 });
 

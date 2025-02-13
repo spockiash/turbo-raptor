@@ -10,7 +10,7 @@
     "npm:@types/react@^18.3.12": "18.3.18",
     "npm:@vitejs/plugin-react@^4.3.4": "4.3.4_vite@6.0.11_@babel+core@7.26.7",
     "npm:apexcharts@^3.44.0": "3.54.1",
-    "npm:autoprefixer@^10.4.16": "10.4.20_postcss@8.5.1",
+    "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.5.1",
     "npm:class-variance-authority@~0.7.1": "0.7.1",
     "npm:clsx@2": "2.1.1",
     "npm:lib-utils@^0.0.4": "0.0.4",
@@ -18,12 +18,14 @@
     "npm:mobx@^6.13.6": "6.13.6",
     "npm:papaparse@^5.4.1": "5.5.2",
     "npm:postcss@^8.4.35": "8.5.1",
+    "npm:postcss@^8.5.2": "8.5.2",
     "npm:radix-ui@^1.1.3": "1.1.3_@types+react@18.3.18_@types+react-dom@18.3.5__@types+react@18.3.18_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:react-apexcharts@^1.4.0": "1.7.0_apexcharts@4.4.0__@svgdotjs+svg.js@3.2.4__@svgdotjs+svg.select.js@4.0.2___@svgdotjs+svg.js@3.2.4_react@18.3.1",
     "npm:react-dom@^18.3.1": "18.3.1_react@18.3.1",
     "npm:react@^18.3.1": "18.3.1",
     "npm:tailwind-merge@^3.0.1": "3.0.1",
     "npm:tailwindcss@^3.4.0": "3.4.17_postcss@8.5.1",
+    "npm:tailwindcss@^4.0.6": "4.0.6",
     "npm:vite@*": "6.0.11",
     "npm:vite@^6.0.1": "6.0.11"
   },
@@ -1313,7 +1315,7 @@
         "fraction.js",
         "normalize-range",
         "picocolors",
-        "postcss",
+        "postcss@8.5.1",
         "postcss-value-parser"
       ]
     },
@@ -1879,7 +1881,7 @@
     "postcss-import@15.1.0_postcss@8.5.1": {
       "integrity": "sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==",
       "dependencies": [
-        "postcss",
+        "postcss@8.5.1",
         "postcss-value-parser",
         "read-cache",
         "resolve"
@@ -1889,21 +1891,21 @@
       "integrity": "sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==",
       "dependencies": [
         "camelcase-css",
-        "postcss"
+        "postcss@8.5.1"
       ]
     },
     "postcss-load-config@4.0.2_postcss@8.5.1": {
       "integrity": "sha512-bSVhyJGL00wMVoPUzAVAnbEoWyqRxkjv64tUl427SKnPrENtq6hJwUojroMz2VB+Q1edmi4IfrAPpami5VVgMQ==",
       "dependencies": [
         "lilconfig",
-        "postcss",
+        "postcss@8.5.1",
         "yaml"
       ]
     },
     "postcss-nested@6.2.0_postcss@8.5.1": {
       "integrity": "sha512-HQbt28KulC5AJzG+cZtj9kvKB93CFCdLvog1WFLf1D+xmMvPGlBstkpTEZfK5+AN9hfJocyBFCNiqyS48bpgzQ==",
       "dependencies": [
-        "postcss",
+        "postcss@8.5.1",
         "postcss-selector-parser"
       ]
     },
@@ -1919,6 +1921,14 @@
     },
     "postcss@8.5.1": {
       "integrity": "sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==",
+      "dependencies": [
+        "nanoid",
+        "picocolors",
+        "source-map-js"
+      ]
+    },
+    "postcss@8.5.2": {
+      "integrity": "sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==",
       "dependencies": [
         "nanoid",
         "picocolors",
@@ -2287,7 +2297,7 @@
         "normalize-path",
         "object-hash",
         "picocolors",
-        "postcss",
+        "postcss@8.5.1",
         "postcss-import",
         "postcss-js",
         "postcss-load-config",
@@ -2296,6 +2306,9 @@
         "resolve",
         "sucrase"
       ]
+    },
+    "tailwindcss@4.0.6": {
+      "integrity": "sha512-mysewHYJKaXgNOW6pp5xon/emCsfAMnO8WMaGKZZ35fomnR/T5gYnRg2/yRTTrtXiEl1tiVkeRt0eMO6HxEZqw=="
     },
     "thenify-all@1.6.0": {
       "integrity": "sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==",
@@ -2366,7 +2379,7 @@
       "dependencies": [
         "esbuild",
         "fsevents",
-        "postcss",
+        "postcss@8.5.1",
         "rollup"
       ]
     },
@@ -2436,18 +2449,19 @@
       "npm:@types/react@^18.3.12",
       "npm:@vitejs/plugin-react@^4.3.4",
       "npm:apexcharts@^3.44.0",
-      "npm:autoprefixer@^10.4.16",
+      "npm:autoprefixer@^10.4.20",
       "npm:class-variance-authority@~0.7.1",
       "npm:clsx@2",
       "npm:mobx-react-lite@^4.1.0",
       "npm:mobx@^6.13.6",
       "npm:papaparse@^5.4.1",
+      "npm:postcss@^8.5.2",
       "npm:radix-ui@^1.1.3",
       "npm:react-apexcharts@^1.4.0",
       "npm:react-dom@^18.3.1",
       "npm:react@^18.3.1",
       "npm:tailwind-merge@^3.0.1",
-      "npm:tailwindcss@^3.4.0",
+      "npm:tailwindcss@^4.0.6",
       "npm:vite@^6.0.1"
     ]
   }

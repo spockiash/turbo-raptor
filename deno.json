@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "autoprefixer": "npm:autoprefixer@^10.4.20",
+    "postcss": "npm:postcss@^8.5.2",
+    "tailwindcss": "npm:tailwindcss@^4.0.6"
+  }
+}
